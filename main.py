@@ -51,6 +51,7 @@ def system():
 
     #using the model for classification
     model = DecisionTreeClassifier()
+    model = BaggingClassifier(model, n_estimators=10)
 
     #encode y lables --- 1=>Yes && 0=>No
     label_encoder = LabelEncoder()
